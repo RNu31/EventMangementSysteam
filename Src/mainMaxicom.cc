@@ -1,5 +1,9 @@
-#include<iostream>
-#include<string>
+#include <iostream>
+#include <string>
+#include <chrono>
+#include <time.h>
+
+void Main_Menu();
 
 const int KMaxEvent = 100;
 
@@ -11,8 +15,12 @@ struct Event
     std::string end_date;  //fecha de fin
     int maximun_capacity; // capacidad maxima
     int enrolled; //inscritos
-
 };
+
+int main()
+{
+  return 0;
+}
 
 Event events[KMaxEvent];
 int total_events = 0;
@@ -65,9 +73,10 @@ void DeleteEvent()
     total_events--;
     std::cout << "Evento eliminado exitosamente." << std::endl;
 }
-
-int main()
+  
+void Main_Menu()
 {
-
-return 0;
+  std::cout<<"---------------------------------------------"<<std::endl;
+  std::cout<<"|                    M E N U                 "<<std::endl;
+  std::cout<<"---------------------------------------------"<<std::endl;
 }
