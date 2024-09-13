@@ -4,17 +4,17 @@
 struct Person
 {
     std::string name;
-    std::string lastName;
+    std::string last_name;
     std::string media;
     int age;
-    std::string carreraInteres;
+    std::string career_interest;
 };
 
 const int kSizeList = 3;
 
-void registerPerson(struct Person person[], int n);
-void listRegisteredPeople(struct Person person[], int n);
-void deleteRegistration(struct Person person[]);
+void Register_Person(struct Person person[], int n);
+void List_Registered_People(struct Person person[], int n);
+void Delete_Registration(struct Person person[]);
 
 int main()
 {
@@ -22,44 +22,44 @@ int main()
     return 0;
 }
 
-void registerPerson(Person person[], int size)
+void Register_Person(Person person[], int size)
 {
     for (int i = 0; i < size; i++)
     {
         std::cout << "Nombre: " << std::endl;
         std::cin >> person[i].name;
         std::cout << "Apellido: " << std::endl;
-        std::cin >> person[i].lastName;
+        std::cin >> person[i].last_name;
         std::cout << "Medio por el que se entero: " << std::endl;
         std::cin >> person[i].media;
         std::cout << "Edad: " << std::endl;
         std::cin >> person[i].age;
         std::cout << "Carrera de interes: ";
-        std::cin >> person[i].carreraInteres;
+        std::cin >> person[i].career_interest;
     }
 }
 
-void listRegisteredPeople(Person person[], int size)
+void List_Registered_People(Person person[], int size)
 {
     for (int i = 0; i < size; i++)
     {
         std::cout << "Usuario N°: " << i << std::endl;
         std::cout << person[i].name << std::endl;
-        std::cout << person[i].lastName << std::endl;
+        std::cout << person[i].last_name << std::endl;
         std::cout << person[i].media << std::endl;
         std::cout << person[i].age << std::endl;
-        std::cout << person[i].carreraInteres << std::endl;
+        std::cout << person[i].career_interest << std::endl;
     }
 }
 
-void deleteRegistration(Person person[])
+void Delete_Registration(Person person[])
 {
     int nUser = 0;
     std::cout << "N° de usuario a eliminar: ";
     std::cin>>nUser;
     person[nUser].name=nullptr;
-    person[nUser].lastName=nullptr;
+    person[nUser].last_name=nullptr;
     person[nUser].media=nullptr;
     person[nUser].age=0;
-    person[nUser].carreraInteres=nullptr;
+    person[nUser].career_interest=nullptr;
 }
